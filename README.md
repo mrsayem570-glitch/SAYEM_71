@@ -1,1 +1,196 @@
-# -50
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SA EARNING ZONE</title>
+
+<script src='//libtl.com/sdk.js' data-zone='10852660' data-sdk='show_10852660'></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', sans-serif;
+}
+
+html, body{
+height:100%;
+width:100%;
+background:#000;
+overflow:hidden;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+color:#fff;
+
+/* 🌈 Animated Background */
+background: linear-gradient(-45deg,#000,#0f0f0f,#001a1a,#1a001a);
+background-size:400% 400%;
+animation: bg 10s ease infinite;
+
+/* 🔻 MORE ZOOM OUT */
+zoom:0.70;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+/* ✨ particles */
+.particle{
+position:absolute;
+width:6px;
+height:6px;
+border-radius:50%;
+background:#00ffcc;
+opacity:0.6;
+animation: float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);opacity:0;}
+50%{opacity:1;}
+100%{transform:translateY(-100vh);opacity:0;}
+}
+
+/* 💎 card */
+.card{
+width:360px;
+padding:30px;
+border-radius:22px;
+text-align:center;
+
+background: rgba(255,255,255,0.06);
+border: 1px solid rgba(255,255,255,0.15);
+backdrop-filter: blur(18px);
+
+box-shadow: 0 0 35px rgba(0,255,204,0.15);
+transform: perspective(900px) rotateX(5deg);
+transition:0.3s;
+z-index:2;
+}
+
+.card:hover{
+transform: perspective(900px) rotateX(0deg) scale(1.03);
+}
+
+/* LOGO */
+.card img{
+width:95px;
+height:95px;
+border-radius:22px;
+object-fit:cover;
+margin-bottom:12px;
+border:2px solid #00ffcc;
+box-shadow:0 0 20px rgba(0,255,204,0.5);
+}
+
+/* TITLE */
+h1{
+font-size:18px;
+letter-spacing:2px;
+margin-bottom:15px;
+color:#00ffcc;
+}
+
+/* BUTTON */
+.watch-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:16px;
+cursor:pointer;
+font-weight:bold;
+background:linear-gradient(135deg,#00ffcc,#00ffaa);
+color:#000;
+box-shadow:0 0 20px rgba(0,255,204,0.4);
+transition:0.3s;
+}
+
+.watch-btn:hover{
+transform:scale(1.06);
+}
+
+/* COUNTER */
+.counter-box{
+margin-top:18px;
+padding:12px;
+border-radius:14px;
+background:rgba(0,0,0,0.3);
+border:1px solid rgba(255,255,255,0.1);
+font-size:14px;
+color:#ddd;
+}
+
+/* DEV BUTTON */
+.dev-btn{
+position:fixed;
+right:15px;
+bottom:15px;
+padding:10px 16px;
+border-radius:12px;
+border:none;
+background:linear-gradient(135deg,#ff00ff,#00ffcc);
+font-weight:bold;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="https://i.ibb.co/GyyJdrB/Chat-GPT-Image-Apr-10-2026-12-30-51-PM.png">
+
+<h1>SA EARNING ZONE</h1>
+
+<button class="watch-btn" onclick="watchAd()">▶️ WATCH AD</button>
+
+<div class="counter-box">
+ADS WATCHED: <span id="count">0</span>
+</div>
+
+</div>
+
+<button class="dev-btn" onclick="window.open('https://t.me/Sayem191','_blank')">
+DEVELOPER
+</button>
+
+<script>
+
+let count = localStorage.getItem("adCount") || 0;
+document.getElementById("count").innerText = count;
+
+function watchAd(){
+if(typeof show_10852660 === "function"){
+show_10852660();
+count++;
+localStorage.setItem("adCount",count);
+document.getElementById("count").innerText = count;
+}
+}
+
+/* particles */
+for(let i=0;i<15;i++){
+let p = document.createElement("div");
+p.className="particle";
+p.style.left = Math.random()*100 + "vw";
+p.style.top = Math.random()*100 + "vh";
+p.style.animationDuration = (4 + Math.random()*4) + "s";
+document.body.appendChild(p);
+}
+
+</script>
+
+</body>
+</html>
